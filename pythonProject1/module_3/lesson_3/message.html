@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasturlashni O'rganish</title>
+    <style>
+        /* Umumiy stil */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Navigatsiya */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        header h1 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Bosh sahifa */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?code') no-repeat center center/cover;
+            height: 70vh;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .hero .button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .hero .button:hover {
+            background-color: #218838;
+        }
+
+        /* Xizmatlar */
+        .services {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .services h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .services .card {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin: 10px;
+        }
+        .service-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header va Navigatsiya -->
+    <header>
+        <div class="container">
+            <h1>Dasturlashni O'rganish</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Bosh sahifa</a></li>
+                    <li><a href="#services">Xizmatlar</a></li>
+                    <li><a href="#about">Biz haqimizda</a></li>
+                    <li><a href="#contact">Aloqa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Bosh sahifa qismini blok -->
+    <section class="hero">
+        <div>
+            <h2>Eng yaxshi dasturlash kurslariga qo'shiling</h2>
+            <p>Dasturlashni noldan boshlashni istaysizmi? Bizning kurslarimiz yordamida tez va samarali o'rganing.</p>
+            <a href="#" class="button">Kurslarni Ko'rish</a>
+        </div>
+    </section>
+
+    <!-- Xizmatlar bo'limi -->
+    <section class="services" id="services">
+        <div class="container">
+            <h3>Bizning Xizmatlarimiz</h3>
+            <div class="service-container">
+                <div class="card">
+                    <h4>Python Dasturlash</h4>
+                    <p>Python dasturlash tilini mukammal darajada o'rganing va uning imkoniyatlaridan foydalanishni boshlang.</p>
+                </div>
+                <div class="card">
+                    <h4>Veb Dasturlash</h4>
+                    <p>HTML, CSS va JavaScript yordamida veb sahifalar yaratishni o'rganing va loyihalaringizni internetga joylashtiring.</p>
+                </div>
+                <div class="card">
+                    <h4>Sun'iy Intellekt</h4>
+                    <p>Sun'iy intellekt asoslari, mashinaviy o'qitish va chuqur o'qitish haqida bilimlarga ega bo'ling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dasturlashni O'rganish | Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

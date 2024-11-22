@@ -1,0 +1,7 @@
+Python Programming,John Zelle
+Muxabbat,Shaxboz U.E
+salom,Robert C. Martin
+world,Robert C. Martin
+qasos,Robert C. Martin
+Clean Code,sultanov bourbek
+

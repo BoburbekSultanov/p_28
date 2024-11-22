@@ -1,0 +1,4 @@
+1|ali|26
+2|vali|34
+3|gani|23
+4|alisher|12

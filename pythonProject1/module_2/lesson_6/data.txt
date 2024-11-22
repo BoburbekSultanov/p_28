@@ -1,0 +1,9 @@
+islom,21
+ali,23
+vali,34
+sarvar,23
+alishe,23
+botir,34
+sa,54
+eds,26
+

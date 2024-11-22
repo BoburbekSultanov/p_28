@@ -1,0 +1,312 @@
+User:
+    id
+    fullname
+    email
+    password
+
+Category:
+    id
+    name
+
+ToDo:
+    id
+    title
+    description
+    start_time
+    category : Category
+    status [new,processing , completed]
+
+============= main ========================
+
+1) Register
+2) Login
+3) exit
+
+            ---------------- Register -----------------
+            fullname>>>
+            email>>>
+            password>>>
+
+            if check: unique[email] , check len[password]
+                save()
+                <-main
+            <-main
+            ---------------- Login -----------------
+
+            email>>>
+            password>>>
+
+            if check: email == user.email and password == user.password
+                account()
+            <-main
+
+
+            ---------------- Exit -----------------
+
+            Good Bye
+
+
+================= account ====================
+
+   1) Panel
+   2) settings
+   0) logout
+
+            ---------------- settings -----------------
+
+            1) Edit account
+            2) about
+            3) delete account
+
+            0) <-back
+                                ############### Edit account ################
+                                1) fullname
+                                2) email
+                                3) password
+                                >>>
+                                new_value>>>
+                                set value to attribute   [session_user]
+                                <-settings
+
+                                ############### delete account ################
+                                you agree to delete the account [N/y]>>>
+
+                                del users[session_user]
+                                <- main
+
+                                ############### about ################
+
+                                    fullname :
+                                    email :
+                                    password : ********
+
+                                ############### back ################
+                                <-account
+
+            ---------------- Panel -----------------
+
+            1) Category
+            2) ToDo
+            0) <-back
+
+                                ############### Category ################
+
+                                *) Search 🔍
+                                1) Add
+                                2) List
+                                0) <-back
+
+
+                                                %%%%%%%%%%%%%%  Search 🔍 %%%%%%%%%%%%%%%%%%
+                                                🔍 :
+
+
+                                                1) Category1
+                                                2) Category2
+                                                3) Category3
+                                                ....
+                                                position >>>
+
+                                                # session catgeory
+                                                1) delete
+                                                2) update
+                                                3) about
+                                                0) <-back
+
+                                                                        ^^^^^^^^^^^^^^ delete  ^^^^^^^^^^^
+
+                                                                        categories.remove(position-1)
+                                                                        <-Category
+
+                                                                        ^^^^^^^^^^^^^^ update  ^^^^^^^^^^^
+
+                                                                        1) name
+                                                                        0) <-back
+                                                                        field >>>
+                                                                        new_value >>>
+                                                                        set new value to field
+
+                                                                        ^^^^^^^^^^^^^^ about  ^^^^^^^^^^^
+
+                                                                            id:
+                                                                            name:
+
+                                                                        <-session category
+
+                                                                        ^^^^^^^^^^^^^^ back  ^^^^^^^^^^^
+
+                                                                        <- Category
+
+
+
+
+                                                %%%%%%%%%%%%%%  Add %%%%%%%%%%%%%%%%%%
+                                                name>>>
+                                                save()
+
+                                                %%%%%%%%%%%%%%  List %%%%%%%%%%%%%%%%%%
+
+                                                1) Category1
+                                                2) Category2
+                                                3) Category3
+                                                ....
+                                                0) <-back
+                                                position >>>1
+
+                                                # session catgeory
+                                                1) delete
+                                                2) update
+                                                3) about
+                                                0) <-back
+
+                                                                        ^^^^^^^^^^^^^^ delete  ^^^^^^^^^^^
+
+                                                                        categories.remove(position-1)
+                                                                        <-Category
+
+                                                                        ^^^^^^^^^^^^^^ update  ^^^^^^^^^^^
+
+                                                                        1) name
+                                                                        0) <-back
+                                                                        field >>>
+                                                                        new_value >>>
+                                                                        set new value to field
+
+                                                                        ^^^^^^^^^^^^^^ about  ^^^^^^^^^^^
+
+                                                                            id:
+                                                                            name:
+
+                                                                        <-session category
+
+                                                                        ^^^^^^^^^^^^^^ back  ^^^^^^^^^^^
+
+                                                                        <- Category
+
+
+                                ############### ToDo ################
+
+                                *) Search 🔍
+                                1) Add
+                                2) List
+                                3) By Category
+                                0) <-back
+
+
+                                                %%%%%%%%%%%%%%  Search 🔍 %%%%%%%%%%%%%%%%%%
+                                                🔍 :
+
+
+                                                1) todo1
+                                                2) todo2
+                                                3) todo3
+                                                ....
+                                                position >>>
+
+                                                # session catgeory
+                                                1) delete
+                                                2) update
+                                                3) about
+                                                0) <-back
+
+                                                                        ^^^^^^^^^^^^^^ delete  ^^^^^^^^^^^
+
+                                                                        todos.remove(position-1)
+                                                                        <-ToDo
+
+                                                                        ^^^^^^^^^^^^^^ update  ^^^^^^^^^^^
+
+                                                                        1) title
+                                                                        2) description
+                                                                        3) start_time
+                                                                        4) category
+                                                                        5) status
+                                                                        0) <-back
+
+                                                                        field >>>
+                                                                        new_value >>>
+                                                                        set new value to field
+
+                                                                        ^^^^^^^^^^^^^^ about  ^^^^^^^^^^^
+
+                                                                            id:
+                                                                            title:
+                                                                            description:
+                                                                            start_time:
+                                                                            category:
+                                                                                id :
+                                                                                name:
+                                                                            status:
+
+                                                                        <-session category
+
+                                                                        ^^^^^^^^^^^^^^ back  ^^^^^^^^^^^
+
+                                                                        <- Category
+
+
+
+
+                                                %%%%%%%%%%%%%%  Add %%%%%%%%%%%%%%%%%%
+                                                title>>>
+                                                description>>>
+                                                start_time>>>
+                                                    1) category1
+                                                    2) category2
+                                                    3) category3
+                                                    4) category4
+                                                category>>>
+
+                                                save()
+
+                                                %%%%%%%%%%%%%%  List %%%%%%%%%%%%%%%%%%
+
+                                                1) Todo1
+                                                2) Todo2
+                                                3) Todo3
+                                                ....
+                                                0) <-back
+                                                position >>>1
+
+                                                # session todo
+                                                1) delete
+                                                2) update
+                                                3) about
+                                                0) <-back
+
+                                                                        ^^^^^^^^^^^^^^ delete  ^^^^^^^^^^^
+
+                                                                        todos.remove(position-1)
+                                                                        <-ToDo
+
+                                                                        ^^^^^^^^^^^^^^ update  ^^^^^^^^^^^
+
+                                                                        1) title
+                                                                        2) description
+                                                                        3) start_time
+                                                                        4) category
+                                                                        5) status
+                                                                        0) <-back
+
+                                                                        field >>>
+                                                                        new_value >>>
+                                                                        set new value to field
+
+                                                                        ^^^^^^^^^^^^^^ about  ^^^^^^^^^^^
+
+                                                                            id:
+                                                                            title:
+                                                                            description:
+                                                                            start_time:
+                                                                            category:
+                                                                                id :
+                                                                                name:
+                                                                            status:
+
+                                                                        <-session category
+
+                                                                        ^^^^^^^^^^^^^^ back  ^^^^^^^^^^^
+
+                                                                        <- Category
+
+

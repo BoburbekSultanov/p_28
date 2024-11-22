@@ -1,0 +1,144 @@
+cards:
+    id
+    card_number
+    password
+    balance
+    term
+    bank_type
+
+users:
+    id
+    first_name
+    last_name
+    phone_number
+    card_id
+
+cars:
+    id
+    model
+    type [light, heavy]
+    name
+    number
+    status [False]
+    user_id
+
+map:
+    pass
+
+order:
+    id
+    user_id
+    payment
+    order_time
+
+    100 * 1 min
+    500 * 1 min
+
+
+
+
+
+
+============= main ========================
+
+1) Register
+2) Login
+3) exit
+>>>
+
+            ---------------- Register -----------------
+            first_name >>>
+            last_name >>>
+            phone_number >>>
+            code >>>
+
+            if check: unique[phone_number] , code
+                save()
+                <-main
+            <-main
+            ---------------- Login -----------------
+
+            phone_number>>>
+            code >>>
+
+            if check: email == user.email and password == user.password
+                account()
+            <-main
+
+
+            ---------------- Exit -----------------
+
+            Good Bye
+
+
+================= account ====================
+        1. Parking
+        2. Payment history
+        3. logout
+        >>>
+
+                   ###################### Parking ###################
+
+                   1. Placing
+                   2. Take out
+                   3. back
+
+                                ================== Placing ===================
+                                  1     2     3     4
+                                  5     6     7     8
+                                  9     10    11    12
+                                  13    14    15    16
+
+                                  place_number >>>
+
+                                  check place_number
+                                  model>>
+                                  type [light, heavy] >>>
+                                  name >>>
+                                  number >>>
+                                  save()
+
+                                  <- Parking
+
+
+                                ================== Take out ===================
+
+                                1     2.🚘      3     4
+                                5     6        7     8
+                                9     10.🚘     11    12
+                                13    14       15    16
+
+                                >>> 10
+
+                                        chek:
+                                            id:
+                                            arrival time:
+                                            take away:
+                                            pay amount:
+                                            card_number: 9860 ***** 4567
+
+
+
+                                check: moshina o'ziniki ekanligini tekshirish
+                                       card_balance > payment amount
+
+                                cars status change -> False
+                                order create
+
+                                <- Parking
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
